@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+    <nav>
+        <div>Quiz App</div>
+        <a href="index.html"><div><button title="Go back to home page">Back</button></div></a>  
+    </nav>
+
+    <main>
+        <h1>Quiz App</h1>
+
+        <div class="quiz-main-div">
+            <div class="quiz-starter-div">
+                <div class="start-quiz-section">
+                    <div class="callback-div">
+                        <div id="callback-note"></div>
+                    </div>
+
+                    <select onchange="selectSubject()" name="quiz-subject" id="quiz-subject">
+                        <option class="quiz-option" value="" selected>Subject</option>
+                        <option value="agr">Agriculture</option>
+                        <option value="eng">English</option>
+                        <option value="mth">Mathematics</option>
+                        <option value="ict">Computer</option>
+                        <option value="igb">Igbo</option>
+                    </select>
+
+                    <button type="button" onclick="startQuiz()" id="start-quiz" title="Click to start quiz">Start Quiz</button>
+                </div>
+                <p>
+                    <b>
+                        Note: Once you click the start quiz 
+                        button, you have 5 minutes to finish 
+                        up and submit, else the quiz will be 
+                        automatically submitted once the 5 
+                        minutes elapses.
+                    </b>
+                </p>
+
+                <div class="quiz-submit-note-div">
+                    <div id="quiz-submit-note"></div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <section id="quiz-timer"></section>
+                <h3 id="quiz-subject-name"></h3>
+
+                <div class="quiz-proper">
+                    <p>
+                        <b>Instruction: </b>Answer All
+                    </p>
+                    
+                    <ol>
+                        <li>
+                            Who is the father of computer?<br>
+                            <input type="radio" class="question-radio" name="q1" id="q1-a"> Mike Pence <br>
+                            <input type="radio" class="question-radio" name="q1" id="q1-b"> Philip Emeagwali <br>
+                            <input type="radio" class="question-radio" name="q1" id="q1-c"> Charles Babbage <br>
+                            <input type="radio" class="question-radio" name="q1" id="q1-d"> Gotfried Leibniz 
+                        </li>
+
+                        <li>
+                            Name one early counting device<br>
+                            <input type="radio" class="question-radio" name="q2" id="q2-a"> Computer <br>
+                            <input type="radio" class="question-radio" name="q2" id="q2-b"> Calculator <br>
+                            <input type="radio" class="question-radio" name="q2" id="q2-c"> Artificial Intelligence <br>
+                            <input type="radio" class="question-radio" name="q2" id="q2-d"> Stones 
+                        </li>
+
+                        <li>
+                            What is the full meaning of the acronym www?<br>
+                            <input type="radio" class="question-radio" name="q3" id="q3-a"> World wide web <br>
+                            <input type="radio" class="question-radio" name="q3" id="q3-b"> World web wide <br>
+                            <input type="radio" class="question-radio" name="q3" id="q3-c"> World war win <br>
+                            <input type="radio" class="question-radio" name="q3" id="q3-d"> World web web 
+                        </li>
+
+                        <li>
+                            All are part of data processing cycle EXCEPT?<br>
+                            <input type="radio" class="question-radio" name="q4" id="q4-a"> Collation <br>
+                            <input type="radio" class="question-radio" name="q4" id="q4-b"> Printing <br>
+                            <input type="radio" class="question-radio" name="q4" id="q4-c"> Storage <br>
+                            <input type="radio" class="question-radio" name="q4" id="q4-d"> Collection 
+                        </li>
+
+                        <li>
+                            One of these is not a search engine<br>
+                            <input type="radio" class="question-radio" name="q5" id="q5-a"> http://www.com <br>
+                            <input type="radio" class="question-radio" name="q5" id="q5-b"> http://www.google.com <br>
+                            <input type="radio" class="question-radio" name="q5" id="q5-c"> http://www.mamma.com <br>
+                            <input type="radio" class="question-radio" name="q5" id="q5-d"> http://www.yahoo.com
+                        </li>
+                    </ol>
+
+                    <div class="submit-quiz">
+                        <button onclick="submitQuiz()" type="submit" id="submit-button" title="Click to submit quiz">Submit Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Samwise Tech
+    </footer>
+</body>
+<script src="../js/quiz.js"></script>
+</html>

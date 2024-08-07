@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/note.css">
+</head>
+<body>
+    <nav>
+        <div>Notes</div>
+        <a href="index.html"><div><button title="Go back to home page">Back</button></div></a>  
+    </nav>
+
+    <main>
+        <div>
+            <h1>Notes</h1>
+        </div>
+
+        <section>
+            <div class="enter-note">
+                <input onchange="noteTitle()" type="text" name="note-title" id="note-title" placeholder="Title">
+                <textarea onchange="noteText()" name="note-textarea" id="note-textarea" placeholder="Enter notes here..."></textarea>
+                <button onclick="saveNote()" type="submit" title="Click to save note" id="save-button">Save</button>
+            </div>
+
+            <div class="note-entered">
+                <p>
+                    <u>My Notes</u> 
+                </p>
+                <ul id="note-list">
+                    
+                </ul>
+            </div>
+
+            <div class="note-display">
+                <p id="note-title-display">
+                    
+                </p>
+                <section class="display-section">
+                    <div id="note-article"></div>
+                    <div id="post-time"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Samwise Tech
+    </footer>
+</body>
+<script src="../js/note.js"></script>
+</html>

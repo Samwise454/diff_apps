@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/agecalc.css">
+</head>
+<body>
+    <nav>
+        <div>Age Calculator</div>
+        <a href="index.html"><div><button title="Go back to home page">Back</button></div></a>  
+    </nav>
 
+    <main>
+        <h1>Calculate Age</h1>
+
+        <section>
+            <div class="age-calc-input">
+                <p>
+                    Select your birth year and month to calculate present age
+                </p>
+                <input onchange="checkYear()" type="number" name="age-year" id="age-year" placeholder="Enter Year: eg 2002">
+                <select onchange="checkMonth()" title="Select Month" name="age-month" id="age-month">
+                    <option value="" selected>Choose Month</option>
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select> 
+                <button type="submit" onclick="submitAge()" title="Submit Age Data">Submit</button>
+            </div>
+
+            <div class="answer-display">
+                
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        &copy; Samwise Tech
+    </footer>
+</body>
+<script src="../js/agecalc.js"></script>
+</html>
