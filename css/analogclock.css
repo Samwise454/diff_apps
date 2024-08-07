@@ -1,0 +1,107 @@
+nav {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    place-items: center;
+    font-size: 20px;
+    color: white;
+}
+button {
+    padding: 10px;
+    border-radius: 10px;
+}
+h1 {
+    color: white;
+}
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    text-align: center;
+    margin-top: 20px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0.264), rgba(0, 0, 0, 0.904))
+}
+#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    /*to make the height and width responsive*/
+    width: 40vw;
+    background: url("../img/clock_bg.png") no-repeat;
+    /*setting our background image*/
+    background-size: 100%;
+}
+#hour, #minute, #second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#center_point {
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    transform-origin: bottom;
+    width: 4%;
+    height: 4%;
+    top: 48.10%;
+    left: 48.30%;
+}
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25.50%;
+    left: 49.40%;
+}
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 20.5%;
+    left: 49.5%;
+    opacity: 0.8;
+    background-color: rgb(17, 0, 103);
+}
+#second {
+    width: 1%;
+    height: 38.25%;
+    top: 12%;
+    left: 49.80%;
+    opacity: 0.8;
+    background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        place-items: left;
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+    }
+    main section {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    h1 {
+        text-align: left;
+        padding: 0 20px;
+    }
+    #clockContainer {
+        position: relative;
+        margin: auto;
+        margin-top: -20px;
+        /*to make the height and width responsive*/
+        height: 100vw;
+        width: 100vw;
+        background: url("../img/clock_bg.png") no-repeat;
+        background-size: 100%;
+    }
+    footer {
+        margin-top: auto;
+    }
+}

@@ -6,6 +6,10 @@ nav {
     font-size: 20px;
     color: white;
 }
+button {
+    padding: 10px;
+    border-radius: 10px;
+}
 h1 {
     color: white;
 }
@@ -15,31 +19,61 @@ main {
     grid-template-rows: 1fr;
     place-items: center;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 20px;
+    height: 100%;
 }
-main section {
+.bmi-section1 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-p {
+.bmi-section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.underweight {
+    color: black;
+    padding:  10px;
+}
+.normal, .overweight, .obese {
+    color: white;
+    padding:  10px;
+}
+.bmi-underweight, .bmi-normal, .bmi-overweight {
+    margin-right: 10px;
+}
+.bmi-normal {
+    background-color: green;
+    font-size: 14px;
+}
+.bmi-underweight {
+    background-color: rgb(255, 208, 0);
+    font-size: 14px;
+}
+.bmi-overweight {
+    background-color: rgb(102, 83, 0);
+    font-size: 14px;
+}
+.bmi-obese {
+    background-color: rgb(165, 0, 0);
+    font-size: 14px;
+}
+.bmi-intro {
     margin-bottom: 20px;
     color: black;
     background-color: rgba(128, 128, 128, 0.25);
     font-size: 14px;
     padding: 10px;
     color: white;
+    line-height: 2em;
 }
 button {
     padding: 10px;
     border-radius: 10px;
-}
-select {
-    cursor: pointer;
-}
-input, select {
-    margin-right: 10px;
 }
 .answer-display {
     background-color: white;
@@ -51,7 +85,6 @@ input, select {
     border-radius: 10px;
     font-size: 14px;
 }
-
 
 @media only screen and (max-width: 600px) {
     main {
@@ -72,24 +105,36 @@ input, select {
         text-align: left;
         padding: 0 20px;
     }
-    .age-calc-input {
+    .bmi-div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+    }
+    .bmi-div2 {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    .age-calc-input p {
+    .bmi-intro {
         backdrop-filter: blur(5px);
-        padding: 20px 0;
-        font-size: 16px;
     }
-    .age-calc-input input, select {
+    .bmi-div2 input {
         margin-bottom: 20px;
     }
-    .answer-display {
-        margin-top: 50px;
+    .bmi-section2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0;
     }
-    footer {
-        margin-top: auto;
+    .bmi-section2 section {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+        margin: 2px;
+    }
+    .bmi-section2 section p {
+        padding: 2px;
+        text-align: center;
     }
 }

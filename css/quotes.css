@@ -1,0 +1,99 @@
+nav {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    place-items: center;
+    font-size: 20px;
+    color: white;
+}
+button {
+    padding: 10px;
+    border-radius: 10px;
+}
+h1 {
+    color: white;
+}
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    text-align: center;
+    margin-top: 20px;
+    height: 100%;
+}
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main section p {
+    background-color: rgba(0, 0, 0, 0.349);
+    padding: 10px 10px 5px 10px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.quote-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+}
+#main-quote {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.349);
+    color: white;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    line-height: 2em;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        place-items: left;
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    main section {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin-bottom: 60px;
+    }
+    h1 {
+        text-align: left;
+        padding: 0 20px;
+    }
+    main section p {
+        margin-top: 40px;
+    }
+    .quote-div {
+        padding: 20px;
+        margin-top: -20px;
+    }
+    #main-quote {
+        width: 300px;
+        height: 400px;
+        overflow-y: auto;
+        margin-bottom: 0px;
+    }
+    footer {
+        position: relative;
+    }
+}
