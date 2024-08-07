@@ -10,7 +10,7 @@ nav {
 body {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url("img/for_desktop.jpg");
+    background-image: url("../img/for_desktop.jpg");
     height: 100dvh;
 }
 button {
