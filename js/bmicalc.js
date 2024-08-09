@@ -35,7 +35,7 @@ function submitBmi() {
             answerDisplay.style.backgroundColor = "green";
             answerDisplay.style.color = "white";
         }
-        else if (bmiRound >= 25 && bmiRound <= 40) {
+        else if (bmiRound >= 25 && bmiRound < 40) {
             answerDisplay.style.backgroundColor = "rgb(102, 83, 0)";
             answerDisplay.style.color = "white";
         }
