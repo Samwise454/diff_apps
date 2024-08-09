@@ -31,7 +31,7 @@ function submitBmi() {
             answerDisplay.style.backgroundColor = "rgb(255, 208, 0)";
             answerDisplay.style.color = "black";
         }
-        else if (bmiRound >= parseFloat(18.5) && bmiRound < 25) {
+        else if (bmiRound >= 18.5 && bmiRound < 25) {
             answerDisplay.style.backgroundColor = "green";
             answerDisplay.style.color = "white";
         }
