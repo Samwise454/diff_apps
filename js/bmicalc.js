@@ -25,7 +25,7 @@ function submitBmi() {
     else {
         let heightSquare = height * height;
         let bmi = ((weight / heightSquare) * 10000);
-        let bmiRound = Math.round(bmi);
+        let bmiRound = Math.floor(bmi);
 
         if (bmiRound <= 18) {
             answerDisplay.style.backgroundColor = "rgb(255, 208, 0)";
